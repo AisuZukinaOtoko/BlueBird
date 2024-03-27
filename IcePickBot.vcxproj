@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1f7335dc-7422-48d8-886c-35def50fb7d5}</ProjectGuid>
+    <RootNamespace>IcePickBot</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>Vendor/SDL image/lib/x64;Vendor/SDL/lib/x64/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>Vendor/SDL image/lib/x64;Vendor/SDL/lib/x64/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>Vendor/SDL image/lib/x64;Vendor/SDL/lib/x64/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>Vendor/SDL image/lib/x64;Vendor/SDL/lib/x64/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BlueBirdBot\BlueBird.cpp" />
+    <ClCompile Include="BlueBirdBot\ChessBoard.cpp" />
+    <ClCompile Include="BlueBirdBot\ChessPiece.cpp" />
+    <ClCompile Include="IcePickEngineManager\ChessEngineManager.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlueBirdBot\Assert.h" />
+    <ClInclude Include="BlueBirdBot\BlueBird.h" />
+    <ClInclude Include="BlueBirdBot\ChessBoard.h" />
+    <ClInclude Include="BlueBirdBot\ChessPiece.h" />
+    <ClInclude Include="IcePickEngineManager\ChessEngineManager.h" />
+    <ClInclude Include="Vendor\FileWatch.hpp" />
+    <ClInclude Include="Vendor\json.hpp" />
+    <ClInclude Include="Vendor\SDL\include\begin_code.h" />
+    <ClInclude Include="Vendor\SDL\include\close_code.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_assert.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_atomic.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_audio.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_bits.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_blendmode.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_clipboard.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_android.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_emscripten.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_iphoneos.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_macosx.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_minimal.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_ngage.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_os2.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_pandora.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_windows.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_wingdk.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_winrt.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_config_xbox.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_copying.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_cpuinfo.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_egl.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_endian.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_error.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_events.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_filesystem.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_gamecontroller.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_gesture.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_guid.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_haptic.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_hidapi.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_hints.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_image.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_joystick.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_keyboard.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_keycode.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_loadso.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_locale.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_log.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_main.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_messagebox.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_metal.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_misc.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_mixer.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_mouse.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_mutex.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_name.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengl.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengles.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengles2.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_opengl_glext.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_pixels.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_platform.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_power.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_quit.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_rect.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_render.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_revision.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_rwops.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_scancode.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_sensor.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_shape.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_stdinc.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_surface.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_system.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_syswm.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_assert.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_common.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_compare.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_crc32.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_font.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_fuzzer.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_harness.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_images.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_log.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_md5.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_memory.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_test_random.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_thread.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_timer.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_touch.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_types.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_version.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_video.h" />
+    <ClInclude Include="Vendor\SDL\include\SDL_vulkan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libpng16-16.dll" />
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
+    <None Include="settings.json" />
+    <None Include="zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="IcePickEngineManager\Assets\ChessPieces.png" />
+    <Image Include="IcePickEngineManager\Assets\promotion background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="IcePickEngineManager\Notify.txt" />
+    <Text Include="Move.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
