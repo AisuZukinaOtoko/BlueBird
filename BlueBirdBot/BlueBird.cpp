@@ -12,10 +12,10 @@ void BlueBird::init() {
 
 void BlueBird::onOpponentMove(std::string boardPosition) {
 	updatePiecesBoard(boardPosition);
-
+							
 	board.FENtoBoard(boardPosition);
-	board.printBoard();
 	std::cout << board.getFEN() << std::endl;
+	std::cout << board;
 }
 
 int BlueBird::getBoardEvaluation(ChessBoard& currentPosition) {

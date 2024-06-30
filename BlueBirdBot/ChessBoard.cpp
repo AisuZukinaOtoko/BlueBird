@@ -22,6 +22,10 @@ char& Column::operator[](int index) {
 	CORE_ASSERT(index >= 0 && index < 8, "Row index out of range.");
 	return row[index];
 }
+char Column::operator[](int index) const{
+	CORE_ASSERT(index >= 0 && index < 8, "Row index out of range.");
+	return row[index];
+}
 
 ChessBoard::ChessBoard() {
 	chessBoard[7] = {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'};
@@ -35,14 +39,19 @@ Column& ChessBoard::operator[](int index) {
 	CORE_ASSERT(index >= 0 && index < 8, "Column index out of range.");
 	return chessBoard[index];
 }
+Column ChessBoard::operator[](int index) const{
+	CORE_ASSERT(index >= 0 && index < 8, "Column index out of range.");
+	return chessBoard[index];
+}
 
-void ChessBoard::printBoard() {
+std::ostream& operator<<(std::ostream& outputStream, const ChessBoard& chessBoard) {
 	for (int y = 0; y < 8; y++) {
 		for (int x = 0; x < 8; x++) {
-			std::cout << chessBoard[x][y] << " ";
+			outputStream << chessBoard[x][y] << " ";
 		}
-		std::cout << "\n";
+		outputStream << "\n";
 	}
+	return outputStream;
 }
 
 void ChessBoard::FENtoBoard(std::string FEN) {
