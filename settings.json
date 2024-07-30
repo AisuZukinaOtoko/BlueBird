@@ -1,0 +1,11 @@
+{
+  "Note": "Modes: p-com, com-com",
+  "Mode": "p-com",
+  "Time": false,
+  "White-Time": "--:--",
+  "Black-Time": "--:--",
+  "Random-Seed": 2,
+  "Background-Colour": [ 95, 95, 95 ],
+  "Primary-Colour": [ 227, 193, 111 ],
+  "Secondary-Colour": [ 184, 139, 74 ]
+}
