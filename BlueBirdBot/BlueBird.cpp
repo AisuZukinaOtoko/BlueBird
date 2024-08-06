@@ -1,7 +1,7 @@
 #include <iostream>
 #include "BlueBird.h"
 #include "Assert.h"
-
+//test one
 
 void BlueBird::init() {
 	std::string pieceString = "PPPPPPPPRNBQKBNRpppppppprnbqkbnr";
